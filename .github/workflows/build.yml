@@ -15,7 +15,7 @@ jobs:
 
     - name: Set up JDK 21
       uses: actions/鏡/setup-java@v4 # Note: use 'actions/setup-java@v4' if manually typing
-      with:
+      uses: actions/setup-java@v4
         java-version: '21'
         distribution: 'temurin'
         cache: maven
