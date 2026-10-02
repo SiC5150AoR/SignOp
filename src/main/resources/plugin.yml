@@ -1,6 +1,6 @@
 name: SignOp
-version: '1.0'
+version: '1.1'
 main: com.yourname.signop.SignOp
 api-version: '1.21'
-author: YourName
-description: Executes commands written on a sign the moment an OP closes the edit UI.
+author: SiC5150AoR
+description: Executes commands written on a sign when an OP closes the UI.
