@@ -10,6 +10,7 @@ import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SignOp extends JavaPlugin implements Listener {
+
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
@@ -18,13 +19,17 @@ public final class SignOp extends JavaPlugin implements Listener {
     @EventHandler
     public void onSignClose(SignChangeEvent event) {
         Player player = event.getPlayer();
-        if (!player.isOp()) return;
+
+        if (!player.isOp()) {
+            return;
+        }
 
         for (int i = 0; i < 4; i++) {
             Component lineComponent = event.line(i);
             if (lineComponent == null) continue;
 
             String lineText = PlainTextComponentSerializer.plainText().serialize(lineComponent).trim();
+
             if (lineText.startsWith("/")) {
                 String commandToRun = lineText.substring(1);
                 if (!commandToRun.isEmpty()) {
