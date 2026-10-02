@@ -16,17 +16,17 @@
 
     <repositories>
         <repository>
-            <id>papermc-repo</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
+            <id>papermc</id>
+            <url>https://papermc.io</url>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- Paper API Dev Dependency for 26.3 -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>[26.3.build,)</version>
+            <!-- 1.21.3 corresponds directly to the 26.3 development tier -->
+            <version>1.21.3-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
